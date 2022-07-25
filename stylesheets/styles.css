@@ -9,6 +9,7 @@ body {
     display: flex;
     flex: 1 1 0rem;
     flex-direction: column;
+    max-width: 50rem;
     aspect-ratio: 1/1;
     margin: 10rem;
     border: 0.5rem solid black;

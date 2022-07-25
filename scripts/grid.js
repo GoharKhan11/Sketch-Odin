@@ -23,10 +23,26 @@ function createGrid (sideValue) {
         gridBlockDiv.addEventListener("mouseover", () => {
             // logs the pre-event opacity
             console.log(gridBlockDiv.style.opacity); 
-            gridBlockDiv.style.opacity = (parseInt(gridBlockDiv.style.opacity) + 1);
+            gridBlockDiv.style.opacity = (parseInt(gridBlockDiv.style.opacity) + 0.1);
         })
     })
 }
 
+
+const gridButton = document.querySelector(".new-grid-button");
+gridButton.addEventListener("click", function recreateGrid () {
+    let newSize = 0;
+    newSize = prompt("Please enter a new grid size (max 100)");
+    while (newSize > 100) {
+        newSize = prompt("The size entered is too large (max 100)")
+    }
+    let mainGridDiv = document.querySelector(".grid-main");
+    let firstChild = mainGridDiv.firstElementChild;
+    while(firstChild) {
+        firstChild.remove();
+        firstChild = mainGridDiv.firstElementChild;
+    }
+    createGrid(newSize);
+})
 
 createGrid(16);
