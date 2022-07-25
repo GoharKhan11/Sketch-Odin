@@ -27,6 +27,7 @@ body {
 /* Grid Cells */
 
 .grid-block {
-    background-color: white;
+    background-color: black;
+    border: 0.25rem solid black;
     aspect-ratio: 1/1;
 }

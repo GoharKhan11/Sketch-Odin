@@ -28,12 +28,13 @@ function createGrid (sideValue) {
 
     // Get all the blocks in the m x m grid by class
     const gridBlockDivs = document.querySelectorAll(".grid-block");
-    // Add event listener to each of the grid blocks
     gridBlockDivs.forEach(gridBlockDiv => {
-        // Set a mouse over event to chance opacity of block to current opacity + 0.1
+        gridBlockDiv.style.opacity = 0;
         gridBlockDiv.addEventListener("mouseover", () => {
-            // logs the pre-event opacity
-            gridBlockDiv.style.cssText = "background-color: black;";
+            console.log(gridBlockDiv.style.opacity);
+            if (parseInt(gridBlockDiv.style.opacity) <= 1) {
+                gridBlockDiv.style.opacity = Number(gridBlockDiv.style.opacity) + 0.1;
+            }
         })
     })
 }
