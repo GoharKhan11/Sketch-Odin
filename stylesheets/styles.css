@@ -31,3 +31,13 @@ body {
     border: 0.25rem solid black;
     aspect-ratio: 1/1;
 }
+
+.new-grid-button {
+    cursor: pointer;
+    background-color: black;
+    color: whitesmoke;
+    font-size: 2.5rem;
+    border: 0.5rem solid black;
+    border-radius: 0.5rem;
+    padding: 1rem 3rem;
+}
