@@ -5,6 +5,8 @@ body {
     align-items: center;
 }
 
+/* Main Region of Grid */
+
 .grid-main {
     display: flex;
     flex: 1 1 0rem;
@@ -15,14 +17,16 @@ body {
     border: 0.5rem solid black;
 }
 
+/* Row of Grid Cells */
+
 .grid-row {
     display: flex;
     flex: 1 1 0rem;
 }
 
+/* Grid Cells */
+
 .grid-block {
-    background-color: black;
-    opacity: 0;
-    border: 0.25rem solid black;
+    background-color: white;
     aspect-ratio: 1/1;
 }
